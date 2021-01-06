@@ -11,8 +11,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Medium:size=10" };
-static const char dmenufont[]       = "JetBrains Mono Medium:size=11";
+static const char *fonts[]          = { "JetBrains Mono Medium:size=13" };
+static const char dmenufont[]       = "JetBrains Mono Medium:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -25,23 +25,28 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "4", "5", "6", "7", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Rofi",  	  NULL,       NULL,       1 << 8,       1,           -1 },
+	/* class      instance   	title    	tags mask     isfloating   monitor */
+	{ "gimp",     NULL,      	NULL,		0,            1,           -1 },
+	{ "firefox",  NULL,      	NULL,		1 << 1,       0,           -1 },
+	{ "st-256color",  NULL,     NULL,		1 << 0,       0,           -1 },
+	{ "Pcmanfm",  NULL, 		NULL,		1 << 2,       0,           -1 },
+	{ "spotify",  NULL, 		NULL,		1 << 7,       0,           -1 },
+	{ "obs",  	  NULL, 	 	NULL,		1 << 8,       0,           -1 },
+	{ "SimpleScreenRecorder",  	NULL, 	 	NULL,		1 << 8,       0,           -1 },
+	{ "Rofi",  	  NULL,      	NULL,		1 << 8,       1,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -71,6 +76,8 @@ static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *clementinecmd[]  = { "clementine", NULL };
 static const char *bravecmd[]  = { "brave", NULL };
 static const char *nitrogencmd[]  = { "nitrogen", NULL };
+static const char *obs[]  = { "obs", NULL };
+static const char *spotifycmd[]  = { "spotify", NULL };
 static const char *scrotcmd[]  = { "scrot", "-e", "mv $f ~/Pictures/Screenshots", NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
@@ -82,7 +89,9 @@ static Key keys[] = {
 	{ MODKEY,                 		XK_Print,  spawn,          {.v = scrotcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = filecmd } },
 	{ MODKEY|ShiftMask,             XK_n, 	   spawn,          {.v = nitrogencmd } },
+	{ MODKEY|ShiftMask,             XK_s, 	   spawn,          {.v = spotifycmd } },
 	{ MODKEY|ShiftMask,             XK_c, 	   spawn,          {.v = clementinecmd } },
+	{ MODKEY|ShiftMask,             XK_o, 	   spawn,          {.v = obs } },
 	{ MODKEY|ShiftMask,             XK_b, 	   spawn,          {.v = bravecmd } },
 	{ MODKEY,             			XK_Return, spawn,          {.v = termcmd } },
 	{ ControlMask|Mod1Mask,			XK_f,	   spawn,          {.v = firefoxcmd } },
