@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "1⏽", "2⏽", "3⏽", "4⏽", "5⏽", "6⏽", "7⏽", "8⏽", "9⏽" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -36,8 +36,10 @@ static const Rule rules[] = {
 	{ "gimp",     NULL,      	NULL,		0,            1,           -1 },
 	{ "firefox",  NULL,      	NULL,		1 << 1,       0,           -1 },
 	//{ "st-256color",  NULL,     NULL,		1 << 0,       0,           -1 },
-	{ "Pcmanfm",  NULL, 		NULL,		1 << 2,       0,           -1 },
-	{ "spotify",  NULL, 		NULL,		1 << 7,       0,           -1 },
+	//{ "Pcmanfm",  NULL, 		NULL,		1 << 2,       0,           -1 },
+	{ "discord",  NULL, 		NULL,		1 << 2,       0,           -1 },
+	{ "Steam",    NULL, 		NULL,		1 << 3,       0,           -1 },
+	{ "Spotify",  NULL, 		NULL,		1 << 7,       0,           -1 },
 	{ "obs",  	  NULL, 	 	NULL,		1 << 8,       0,           -1 },
 	{ "SimpleScreenRecorder",  	NULL, 	 	NULL,		1 << 8,       0,           -1 },
 	{ "Rofi",  	  NULL,      	NULL,		1 << 8,       1,           -1 },
@@ -79,6 +81,7 @@ static const char *clementinecmd[]  = { "clementine", NULL };
 static const char *bravecmd[]  = { "brave", NULL };
 static const char *nitrogencmd[]  = { "nitrogen", NULL };
 static const char *obs[]  = { "obs", NULL };
+static const char *discord[]  = { "discord", NULL };
 static const char *spotifycmd[]  = { "spotify", NULL };
 static const char *scrotcmd[]  = { "scrot", "-e", "mv $f ~/Pictures/Screenshots", NULL };
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
@@ -93,6 +96,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_n, 	   spawn,          {.v = nitrogencmd } },
 	{ MODKEY|ShiftMask,             XK_s, 	   spawn,          {.v = spotifycmd } },
 	{ MODKEY|ShiftMask,             XK_c, 	   spawn,          {.v = clementinecmd } },
+	{ MODKEY|ShiftMask,             XK_d, 	   spawn,          {.v = discord } },
 	{ MODKEY|ShiftMask,             XK_o, 	   spawn,          {.v = obs } },
 	{ MODKEY|ShiftMask,             XK_b, 	   spawn,          {.v = bravecmd } },
 	{ MODKEY,             			XK_Return, spawn,          {.v = termcmd } },
