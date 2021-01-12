@@ -5,5 +5,7 @@
  
  (note: this requires the JetBrains font which can be downloaded using "sudo pacman -S ttf-jetbrains-mono" on arch)
  ## Screenshots:
+ Wallpaper
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/rice.png?raw=true)
+ Vim
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/vim.png?raw=true)
