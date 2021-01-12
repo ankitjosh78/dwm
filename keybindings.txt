@@ -1,0 +1,27 @@
+Most Used Keybindings:
+
+Win + (Number[1-9])-->respective tag
+
+Win + Enter -->st(terminal)
+
+Win + Shift + Enter -->pcmanfm(file manager)
+
+Ctrl + Alt + f -->Firefox
+
+Win + p -->dmenu
+
+Win + q -->kill application window
+
+Win + Shift + d -->discord
+
+Win + Shift + b -->Brave
+
+Win + <F12> --> rofi launcher
+
+Win + Shift + s -->Spotify
+
+Win + Shift + c -->clementine
+
+Win + Shift + o -->obs
+
+Win + Shift + n--nitrogen(wallpaper selector)
