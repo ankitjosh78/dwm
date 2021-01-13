@@ -24,4 +24,6 @@ Win + Shift + c -->clementine
 
 Win + Shift + o -->obs
 
-Win + Shift + n--nitrogen(wallpaper selector)
+Win + Shift + n-->nitrogen(wallpaper selector)
+
+Win + Shift + r-->Quit Dwm(or restart if you have an infinite loop in you .xinitrc)
