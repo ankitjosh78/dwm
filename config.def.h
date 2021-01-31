@@ -12,7 +12,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Medium:size=12" };
+static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=12" };
 static const char dmenufont[]       = "JetBrains Mono Medium:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -26,7 +26,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1⏽", "2⏽", "3⏽", "4⏽ﭮ","5⏽", "6⏽", "7⏽", "8⏽", "9⏽" };
+static const char *tags[] = { "1⏽", "2⏽", "3⏽", "4⏽ﭮ","5⏽", "6⏽", "7⏽", "8⏽", "9⏽" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -45,6 +45,7 @@ static const Rule rules[] = {
 	{ "Lutris",    NULL, 		NULL,		1 << 4,       0,           -1 },
 	{ "Clementine",  NULL, 		NULL,		1 << 5,       0,           -1 },
 	{ "Spotify",  NULL, 		NULL,		1 << 7,       0,           -1 },
+	{ "qBittorrent",  	  NULL, 	 	NULL,		1 << 6,       0,           -1 },
 	{ "obs",  	  NULL, 	 	NULL,		1 << 8,       0,           -1 },
 	{ "SimpleScreenRecorder",  	NULL, 	 	NULL,		1 << 8,       0,           -1 },
 	{ "Rofi",  	  NULL,      	NULL,		1 << 8,       1,           -1 },
