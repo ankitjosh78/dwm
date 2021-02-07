@@ -2,7 +2,7 @@ Most Used Keybindings:
 
 Win + (Number[1-9])-->respective tag
 
-Win + Enter -->st(terminal)
+Win + Enter -->alacritty(terminal)
 
 Win + Shift + Enter -->pcmanfm(file manager)
 
