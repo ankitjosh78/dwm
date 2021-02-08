@@ -30,7 +30,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1⏽", "2⏽", "3⏽", "4⏽ﭮ","5⏽", "6⏽", "7⏽", "8⏽", "9⏽" };
+static const char *tags[] = { "1⏽", "2⏽", "3⏽", "4⏽ﭮ","5⏽", "6⏽", "7⏽", "8⏽" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -48,7 +48,7 @@ static const Rule rules[] = {
 	{ "Steam",    NULL, 		NULL,		1 << 4,       0,           -1 },
 	{ "Lutris",    NULL, 		NULL,		1 << 4,       0,           -1 },
 	{ "Clementine",  NULL, 		NULL,		1 << 5,       0,           -1 },
-	{ "Spotify",  NULL, 		NULL,		1 << 7,       0,           -1 },
+	{ "Spotify",  NULL, 		NULL,		1 << 5,       0,           -1 },
 	{ "qBittorrent",  	  NULL, 	 	NULL,		1 << 6,       0,           -1 },
 	{ "obs",  	  NULL, 	 	NULL,		1 << 8,       0,           -1 },
 	{ "SimpleScreenRecorder",  	NULL, 	 	NULL,		1 << 8,       0,           -1 },
@@ -153,7 +153,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 };
 
