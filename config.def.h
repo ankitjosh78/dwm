@@ -50,8 +50,8 @@ static const Rule rules[] = {
 	{ "Clementine",  NULL, 		NULL,		1 << 5,       0,           -1 },
 	{ "Spotify",  NULL, 		NULL,		1 << 5,       0,           -1 },
 	{ "qBittorrent",  	  NULL, 	 	NULL,		1 << 6,       0,           -1 },
-	{ "obs",  	  NULL, 	 	NULL,		1 << 8,       0,           -1 },
-	{ "SimpleScreenRecorder",  	NULL, 	 	NULL,		1 << 8,       0,           -1 },
+	{ "obs",  	  NULL, 	 	NULL,		1 << 7,       0,           -1 },
+	{ "SimpleScreenRecorder",  	NULL, 	 	NULL,		1 << 7,       0,           -1 },
 	{ "Rofi",  	  NULL,      	NULL,		1 << 8,       1,           -1 },
 };
 
