@@ -12,4 +12,3 @@
  ![Screenshots](https://github.com/ankitjosh78/nvim/blob/main/ss/vim.png?raw=true)
  ### Master and Stack Layout:
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/master_stack.png?raw=true)
- ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/multiple_windows.png?raw=true)
