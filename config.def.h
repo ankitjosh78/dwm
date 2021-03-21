@@ -35,7 +35,7 @@ static const char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"1⏽", "2⏽", "3⏽", "4⏽ﭮ",
+static const char *tags[] = {"1⏽", "2⏽", "3⏽", "4⏽ﭮ",
                              "5⏽", "6⏽", "7⏽", "8⏽"};
 
 static const Rule rules[] =
@@ -55,6 +55,8 @@ static const Rule rules[] =
         {"code-oss", NULL, NULL, 1 << 2, 0, -1},
         {"Steam", NULL, NULL, 1 << 4, 0, -1},
         {"Lutris", NULL, NULL, 1 << 4, 0, -1},
+        {"TeamViewer", NULL, NULL, 1 << 4, 0, -1},
+        {"AnyDesk", NULL, NULL, 1 << 4, 0, -1},
         {"Clementine", NULL, NULL, 1 << 5, 0, -1},
         {"Spotify", NULL, NULL, 1 << 5, 0, -1},
         {"qBittorrent", NULL, NULL, 1 << 6, 0, -1},
