@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx = 3; /* border pixel of windows */
+static const unsigned int borderpx = 1; /* border pixel of windows */
 static const unsigned int gappx = 10;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int systraypinning =
@@ -17,17 +17,17 @@ static const int showsystray = 1; /* 0 means no systray */
 static const int showbar = 1;     /* 0 means no bar */
 static const int topbar = 1;      /* 0 means bottom bar */
 static const char *fonts[] = {
-    "JetBrains Mono Nerd Font:size=12:antialias=true:autohint=true",
+    "JetBrains Mono Nerd Font:size=11:antialias=true:autohint=true",
     "Dejavu Sans Mono for Powerline:size=10",
-    "JoyPixels:size=10:antialias=true:autohint=true",
-    "FontAwesome:size=10:antialias=true:autohint=true",
+    "JoyPixels:size=11:antialias=true:autohint=true",
+    "FontAwesome:size=11:antialias=true:autohint=true",
 };
-static const char dmenufont[] = "JetBrains Mono Nerd Font:size=13";
-static const char col_gray1[] = "#222222";
+static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
+static const char col_gray1[] = "#301E2A";
 static const char col_gray2[] = "#444444";
-static const char col_gray3[] = "#bbbbbb";
-static const char col_gray4[] = "#eeeeee";
-static const char col_cyan[] = "#BE5046";
+static const char col_gray3[] = "#688893";
+static const char col_gray4[] = "#DAB599";
+static const char col_cyan[] = "#688893";
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
@@ -35,8 +35,11 @@ static const char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"1⏽", "2⏽", "3⏽", "4⏽ﭮ",
-                             "5⏽", "6⏽", "7⏽", "8⏽"};
+static const char *tags[] = {"", "", "", "ﭮ",
+                             "", "", "", "",""};
+//static const char *tags[] = {"🇦", "🌐", "👨‍💻", "💬",
+//                             "🎮", "🎵", "🧲", "🎥","💰"};
+
 
 static const Rule rules[] =
     {
@@ -52,6 +55,8 @@ static const Rule rules[] =
         //{ "st-256color",  NULL,     NULL,		1 << 0,       0, -1 },
         //{ "Pcmanfm",  NULL, 		NULL,		1 << 2,       0, -1 },
         {"discord", NULL, NULL, 1 << 3, 0, -1},
+        {"TelegramDesktop", NULL, NULL, 1 << 3, 0, -1},
+        {"Signal", NULL, NULL, 1 << 3, 0, -1},
         {"code-oss", NULL, NULL, 1 << 2, 0, -1},
         {"Steam", NULL, NULL, 1 << 4, 0, -1},
         {"Lutris", NULL, NULL, 1 << 4, 0, -1},
@@ -73,9 +78,9 @@ static const int resizehints =
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {"[]=", tile}, /* first entry is default */
+    {"[M]", monocle},{"[]=", tile}, /* first entry is default */
     {"><>", NULL}, /* no layout function means floating behavior */
-    {"[M]", monocle}, {"|M|", centeredmaster}, {">M>", centeredfloatingmaster},
+     {"|M|", centeredmaster}, {">M>", centeredfloatingmaster},
 };
 
 /* key definitions */
@@ -98,8 +103,8 @@ static char dmenumon[2] =
 static const char *dmenucmd[] = {
     "dmenu_run", "-i",      "-m",  dmenumon, "-fn", dmenufont, "-nb", col_gray1,
     "-nf",       col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL};
-static const char *term1cmd[] = {"alacritty", NULL};
-static const char *term2cmd[] = {"st", NULL};
+static const char *term2cmd[] = {"alacritty", NULL};
+static const char *term1cmd[] = {"st", NULL};
 static const char *filecmd[] = {"nautilus", NULL};
 static const char *roficmd[] = {"rofi", "-show", "run", NULL};
 static const char *firefoxcmd[] = {"firefox", NULL};
@@ -108,6 +113,7 @@ static const char *bravecmd[] = {"brave", NULL};
 static const char *nitrogencmd[] = {"nitrogen", NULL};
 static const char *obs[] = {"obs", NULL};
 static const char *discord[] = {"discord", NULL};
+static const char *ytfzf[] = {"ytfzf","-DN", NULL};
 static const char *spotifycmd[] = {"spotify", NULL};
 static const char *scrotcmd[] = {"scrot", "-e", "mv $f ~/Pictures/Screenshots",
                                  NULL};
@@ -121,11 +127,13 @@ static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0",
 static Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},
+    {MODKEY, XK_period, spawn, SHCMD("/home/ankit/dmenuunicode")},
     {MODKEY, XK_Print, spawn, {.v = scrotcmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = filecmd}},
     {MODKEY | ShiftMask, XK_n, spawn, {.v = nitrogencmd}},
     {MODKEY | ShiftMask, XK_s, spawn, {.v = spotifycmd}},
     {MODKEY | ShiftMask, XK_c, spawn, {.v = clementinecmd}},
+    {MODKEY | ShiftMask, XK_y, spawn, {.v = ytfzf}},
     {MODKEY | ShiftMask, XK_d, spawn, {.v = discord}},
     {MODKEY | ShiftMask, XK_o, spawn, {.v = obs}},
     {MODKEY | ShiftMask, XK_b, spawn, {.v = bravecmd}},
@@ -145,9 +153,9 @@ static Key keys[] = {
     {MODKEY, XK_Return, zoom, {0}},
     {MODKEY, XK_Tab, view, {0}},
     {MODKEY, XK_q, killclient, {0}},
-    {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
-    {MODKEY, XK_f, setlayout, {.v = &layouts[1]}},
-    {MODKEY, XK_m, setlayout, {.v = &layouts[2]}},
+    {MODKEY, XK_m, setlayout, {.v = &layouts[0]}},
+    {MODKEY, XK_t, setlayout, {.v = &layouts[1]}},
+    {MODKEY, XK_f, setlayout, {.v = &layouts[2]}},
     {MODKEY, XK_u, setlayout, {.v = &layouts[3]}},
     {MODKEY, XK_o, setlayout, {.v = &layouts[4]}},
     {MODKEY, XK_space, setlayout, {0}},
@@ -166,7 +174,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_equal, setgaps, {.i = 0}},
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6)
-            TAGKEYS(XK_8, 7){MODKEY | ShiftMask, XK_r, quit, {0}},
+            TAGKEYS(XK_8, 7) TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_r, quit, {0}},
 };
 
 /* button definitions */
