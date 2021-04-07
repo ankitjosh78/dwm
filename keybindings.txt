@@ -4,7 +4,7 @@ Win + (Number[1-9])-->respective tag
 
 Win + Enter -->alacritty(terminal)
 
-Win + Shift + Enter -->pcmanfm(file manager)
+Win + Shift + Enter -->nautilus(file manager)
 
 Ctrl + Alt + f -->Firefox
 
