@@ -23,16 +23,7 @@ static const char *fonts[] = {
     "FontAwesome:size=11:antialias=true:autohint=true",
 };
 static const char dmenufont[] = "JetBrains Mono :size=12";
-static const char col_gray1[] = "#301E2A";
-static const char col_gray2[] = "#444444";
-static const char col_gray3[] = "#688893";
-static const char col_gray4[] = "#DAB599";
-static const char col_cyan[] = "#688893";
-static const char *colors[][3] = {
-    /*               fg         bg         border   */
-    [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
-    [SchemeSel] = {col_gray4, col_cyan, col_cyan},
-};
+#include "/home/ankit/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
 static const char *tags[] = {"", "", "", "ﭮ",
@@ -64,7 +55,7 @@ static const Rule rules[] =
         {"TeamViewer", NULL, NULL, 1 << 3, 0, -1},
         {"AnyDesk", NULL, NULL, 1 << 3, 0, -1},
         {"Spotify", NULL, NULL, 1 << 5, 0, -1},
-        {"qBittorrent", NULL, NULL, 1 << 5, 0, -1},
+        {"qBittorrent", NULL, NULL, 1 << 4, 0, -1},
         {"obs", NULL, NULL, 1 << 5, 0, -1},
         {"SimpleScreenRecorder", NULL, NULL, 1 << 5, 0, -1},
         {"Rofi", NULL, NULL, 1 << 8, 1, -1},
@@ -101,9 +92,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {
-    "dmenu_run", "-i",      "-m",  dmenumon, "-fn", dmenufont, "-nb", col_gray1,
-    "-nf",       col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL};
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb"};
 static const char *term2cmd[] = {"alacritty", NULL};
 static const char *term1cmd[] = {"st", NULL};
 static const char *filecmd[] = {"nautilus", NULL};

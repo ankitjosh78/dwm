@@ -1,6 +1,6 @@
 #!/bin/sh
 
-nitrogen --restore & # wallpaper restored
+wal -R # wallpaper restorer
 picom --experimental-backends --xrender-sync-fence & # compositor
 #.~/.config/polybar/launch.sh &
 /usr/bin/dunst & # dunst
