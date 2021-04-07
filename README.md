@@ -6,7 +6,7 @@
  ## Keybindings:
  Check out the keybindings.txt file.
  ## Screenshots:
- ### Wallpaper
+ ### Desktop
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/rice.png?raw=true)
  ### Vim
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/vim.png?raw=true)
