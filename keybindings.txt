@@ -1,8 +1,8 @@
 Most Used Keybindings:
 
-Win + (Number[1-9])-->respective tag
+Win + (Number[1-6])-->respective tag
 
-Win + Enter -->alacritty(terminal)
+Win + Enter -->st(terminal)
 
 Win + Shift + Enter -->nautilus(file manager)
 
@@ -27,3 +27,5 @@ Win + Shift + o -->obs
 Win + Shift + n-->nitrogen(wallpaper selector)
 
 Win + Shift + r-->Quit Dwm(or restart if you have an infinite loop in you .xinitrc)
+
+_Rest can be found by looking in the config.h file_
