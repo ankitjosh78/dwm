@@ -3,8 +3,8 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx = 1; /* border pixel of windows */
-static const unsigned int gappx = 10;   /* gaps between windows */
+static const unsigned int borderpx = 2; /* border pixel of windows */
+static const unsigned int gappx = 0;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int systraypinning =
     0; /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor
@@ -22,7 +22,7 @@ static const char *fonts[] = {
     "JoyPixels:size=11:antialias=true:autohint=true",
     "FontAwesome:size=11:antialias=true:autohint=true",
 };
-static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
+static const char dmenufont[] = "JetBrains Mono :size=12";
 static const char col_gray1[] = "#301E2A";
 static const char col_gray2[] = "#444444";
 static const char col_gray3[] = "#688893";
@@ -36,7 +36,10 @@ static const char *colors[][3] = {
 
 /* tagging */
 static const char *tags[] = {"", "", "", "ﭮ",
-                             "", "", "", "",""};
+                              "", "",};
+//static const char *tags[] = {"A", "web", ">_", "^_^",
+ //                             ";-)", ":)",};
+
 //static const char *tags[] = {"🇦", "🌐", "👨‍💻", "💬",
 //                             "🎮", "🎵", "🧲", "🎥","💰"};
 
@@ -58,15 +61,12 @@ static const Rule rules[] =
         {"TelegramDesktop", NULL, NULL, 1 << 3, 0, -1},
         {"Signal", NULL, NULL, 1 << 3, 0, -1},
         {"code-oss", NULL, NULL, 1 << 2, 0, -1},
-        {"Steam", NULL, NULL, 1 << 4, 0, -1},
-        {"Lutris", NULL, NULL, 1 << 4, 0, -1},
-        {"TeamViewer", NULL, NULL, 1 << 4, 0, -1},
-        {"AnyDesk", NULL, NULL, 1 << 4, 0, -1},
-        {"Clementine", NULL, NULL, 1 << 5, 0, -1},
+        {"TeamViewer", NULL, NULL, 1 << 3, 0, -1},
+        {"AnyDesk", NULL, NULL, 1 << 3, 0, -1},
         {"Spotify", NULL, NULL, 1 << 5, 0, -1},
-        {"qBittorrent", NULL, NULL, 1 << 6, 0, -1},
-        {"obs", NULL, NULL, 1 << 7, 0, -1},
-        {"SimpleScreenRecorder", NULL, NULL, 1 << 7, 0, -1},
+        {"qBittorrent", NULL, NULL, 1 << 5, 0, -1},
+        {"obs", NULL, NULL, 1 << 5, 0, -1},
+        {"SimpleScreenRecorder", NULL, NULL, 1 << 5, 0, -1},
         {"Rofi", NULL, NULL, 1 << 8, 1, -1},
 };
 
@@ -78,7 +78,8 @@ static const int resizehints =
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {"[M]", monocle},{"[]=", tile}, /* first entry is default */
+    {"[]=", tile}, /* first entry is default */
+    {"[M]", monocle},
     {"><>", NULL}, /* no layout function means floating behavior */
      {"|M|", centeredmaster}, {">M>", centeredfloatingmaster},
 };
@@ -153,8 +154,8 @@ static Key keys[] = {
     {MODKEY, XK_Return, zoom, {0}},
     {MODKEY, XK_Tab, view, {0}},
     {MODKEY, XK_q, killclient, {0}},
-    {MODKEY, XK_m, setlayout, {.v = &layouts[0]}},
-    {MODKEY, XK_t, setlayout, {.v = &layouts[1]}},
+    {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
+    {MODKEY, XK_m, setlayout, {.v = &layouts[1]}},
     {MODKEY, XK_f, setlayout, {.v = &layouts[2]}},
     {MODKEY, XK_u, setlayout, {.v = &layouts[3]}},
     {MODKEY, XK_o, setlayout, {.v = &layouts[4]}},
@@ -173,8 +174,7 @@ static Key keys[] = {
     {MODKEY, XK_equal, setgaps, {.i = +1}},
     {MODKEY | ShiftMask, XK_equal, setgaps, {.i = 0}},
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
-        TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6)
-            TAGKEYS(XK_8, 7) TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_r, quit, {0}},
+        TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) {MODKEY | ShiftMask, XK_r, quit, {0}},
 };
 
 /* button definitions */
