@@ -22,7 +22,7 @@ static const char *fonts[] = {
     "JoyPixels:size=11:antialias=true:autohint=true",
     "FontAwesome:size=11:antialias=true:autohint=true",
 };
-static const char dmenufont[] = "JetBrains Mono :size=12";
+static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
 #include "/home/ankit/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
@@ -49,6 +49,7 @@ static const Rule rules[] =
         //{ "st-256color",  NULL,     NULL,		1 << 0,       0, -1 },
         //{ "Pcmanfm",  NULL, 		NULL,		1 << 2,       0, -1 },
         {"discord", NULL, NULL, 1 << 3, 0, -1},
+        {"mpv", NULL, NULL, 1 << 3, 0, -1},
         {"TelegramDesktop", NULL, NULL, 1 << 3, 0, -1},
         {"Signal", NULL, NULL, 1 << 3, 0, -1},
         {"code-oss", NULL, NULL, 1 << 2, 0, -1},
