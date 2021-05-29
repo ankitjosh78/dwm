@@ -17,7 +17,7 @@ static const int showsystray = 1; /* 0 means no systray */
 static const int showbar = 1;     /* 0 means no bar */
 static const int topbar = 1;      /* 0 means bottom bar */
 static const char *fonts[] = {
-    "JetBrains Mono Nerd Font:size=11:antialias=true:autohint=true",
+    "JetBrains Mono Medium:size=11:antialias=true:autohint=true",
     "Dejavu Sans Mono for Powerline:size=10",
     "JoyPixels:size=11:antialias=true:autohint=true",
     "FontAwesome:size=11:antialias=true:autohint=true",
@@ -26,10 +26,10 @@ static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
 #include "/home/ankit/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
-static const char *tags[] = {"", "", "", "ﭮ",
-                              "", "",};
-//static const char *tags[] = {"A", "web", ">_", "^_^",
- //                             ";-)", ":)",};
+//static const char *tags[] = {"", "", "", "ﭮ",
+//                              "", "",};
+static const char *tags[] = {"1", "2", "3", "4",
+                             "5", "6",};
 
 //static const char *tags[] = {"🇦", "🌐", "👨‍💻", "💬",
 //                             "🎮", "🎵", "🧲", "🎥","💰"};
@@ -93,20 +93,19 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb"};
-static const char *term2cmd[] = {"alacritty", NULL};
-static const char *term1cmd[] = {"st", NULL};
+static const char *dmenucmd[] = { "dmenu_run"};
+static const char *term1cmd[] = {"alacritty", NULL};
+static const char *term2cmd[] = {"st", NULL};
 static const char *filecmd[] = {"nautilus", NULL};
 static const char *roficmd[] = {"rofi", "-show", "run", NULL};
 static const char *firefoxcmd[] = {"firefox", NULL};
-static const char *clementinecmd[] = {"clementine", NULL};
 static const char *bravecmd[] = {"brave", NULL};
 static const char *nitrogencmd[] = {"nitrogen", NULL};
 static const char *obs[] = {"obs", NULL};
 static const char *discord[] = {"discord", NULL};
 static const char *ytfzf[] = {"ytfzf","-DN", NULL};
-static const char *spotifycmd[] = {"spotify", NULL};
-static const char *scrotcmd[] = {"scrot", "-e", "mv $f ~/Pictures/Screenshots",
+static const char *sublimecmd[] = {"subl3", NULL};
+static const char *scrotcmd[] = {"scrot", "-e", "mv $f ~/pix/ss/",
                                  NULL};
 static const char *upvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "+5%",
                               NULL};
@@ -118,12 +117,14 @@ static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0",
 static Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},
-    {MODKEY, XK_period, spawn, SHCMD("/home/ankit/dmenuunicode")},
+    {MODKEY, XK_period, spawn, SHCMD("dmenuunicode")},
     {MODKEY, XK_Print, spawn, {.v = scrotcmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = filecmd}},
     {MODKEY | ShiftMask, XK_n, spawn, {.v = nitrogencmd}},
-    {MODKEY | ShiftMask, XK_s, spawn, {.v = spotifycmd}},
-    {MODKEY | ShiftMask, XK_c, spawn, {.v = clementinecmd}},
+    {MODKEY | ShiftMask, XK_s, spawn, {.v = sublimecmd}},
+    {MODKEY | ShiftMask, XK_c, spawn, SHCMD("codeforces")},
+    {MODKEY | ShiftMask, XK_x, spawn, SHCMD("shut")},
+    {MODKEY | ShiftMask, XK_p, spawn, SHCMD("practice")},
     {MODKEY | ShiftMask, XK_y, spawn, {.v = ytfzf}},
     {MODKEY | ShiftMask, XK_d, spawn, {.v = discord}},
     {MODKEY | ShiftMask, XK_o, spawn, {.v = obs}},
