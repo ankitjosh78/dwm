@@ -12,3 +12,14 @@
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/vim.png?raw=true)
  ### Master and Stack Layout:
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/master_stack.png?raw=true)
+ 
+ ## NOTE:
+ #### In this build I'm changing all my colors on the fly with [pywal](https://github.com/dylanaraps/pywal)
+ #### To get it working just install pywal.
+ #### For arch, install it from the AUR: "paru -S python-pywal" , I use the paru AUR helper.
+ #### Then generate a colorscheme using pywal (eg: wal -i "path\ to\ wallpapers\ directory\")
+ #### Now open the 'config.h' in dwm folder and change the username in the 26th line from "ankit" to yourUserName.
+ #### Now you can build it and it should be perfectly ready for you. When changing wallpapers go to the dwm folder and build it again (sudo make install)
+
+ 
+ 
