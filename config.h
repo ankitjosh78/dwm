@@ -44,7 +44,7 @@ static const Rule rules[] =
         /* class      instance   	title    	tags mask     isfloating
            monitor */
         {"gimp", NULL, NULL, 0, 1, -1},
-        {"firefox", NULL, NULL, 1 << 1, 0, -1},
+        {"Microsoft-edge-beta", NULL, NULL, 1 << 1, 0, -1},
         {"Brave-browser", NULL, NULL, 1 << 1, 0, -1},
         //{ "st-256color",  NULL,     NULL,		1 << 0,       0, -1 },
         //{ "Pcmanfm",  NULL, 		NULL,		1 << 2,       0, -1 },
@@ -98,7 +98,7 @@ static const char *term1cmd[] = {"alacritty", NULL};
 static const char *term2cmd[] = {"st", NULL};
 static const char *filecmd[] = {"nautilus", NULL};
 static const char *roficmd[] = {"rofi", "-show", "run", NULL};
-static const char *firefoxcmd[] = {"firefox", NULL};
+static const char *edgecmd[] = {"microsoft-edge-beta", NULL};
 static const char *bravecmd[] = {"brave", NULL};
 static const char *nitrogencmd[] = {"nitrogen", NULL};
 static const char *obs[] = {"obs", NULL};
@@ -130,7 +130,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_o, spawn, {.v = obs}},
     {MODKEY | ShiftMask, XK_b, spawn, {.v = bravecmd}},
     {MODKEY, XK_Return, spawn, {.v = term1cmd}},
-    {ControlMask | Mod1Mask, XK_f, spawn, {.v = firefoxcmd}},
+    {ControlMask | Mod1Mask, XK_f, spawn, {.v = edgecmd}},
     {ControlMask | Mod1Mask, XK_t, spawn, {.v = term2cmd}},
     {MODKEY, XK_F12, spawn, {.v = roficmd}},
     {MODKEY, XK_b, togglebar, {0}},
