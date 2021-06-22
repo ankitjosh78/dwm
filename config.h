@@ -4,7 +4,7 @@
 
 /* appearance */
 static const unsigned int borderpx = 2; /* border pixel of windows */
-static const unsigned int gappx = 0;   /* gaps between windows */
+static const unsigned int gappx = 6;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int systraypinning =
     0; /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor
@@ -26,10 +26,10 @@ static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
 #include "/home/ankit/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
-//static const char *tags[] = {"", "", "", "ﭮ",
-//                              "", "",};
+//static const char *tags[] = {"1", "2", "3", "4ﭮ",
+//                              "5", "6",};
 static const char *tags[] = {"1", "2", "3", "4",
-                             "5", "6",};
+                            "5", "6",};
 
 //static const char *tags[] = {"🇦", "🌐", "👨‍💻", "💬",
 //                             "🎮", "🎵", "🧲", "🎥","💰"};
@@ -105,7 +105,7 @@ static const char *obs[] = {"obs", NULL};
 static const char *discord[] = {"discord", NULL};
 static const char *ytfzf[] = {"ytfzf","-DN", NULL};
 static const char *sublimecmd[] = {"subl3", NULL};
-static const char *scrotcmd[] = {"scrot", "-e", "mv $f ~/pix/ss/",
+static const char *scrotcmd[] = {"scrot", "-e", "mv $f ~/Pictures/ss/",
                                  NULL};
 static const char *upvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "+5%",
                               NULL};
