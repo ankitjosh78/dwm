@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx = 2; /* border pixel of windows */
+static const unsigned int borderpx = 1; /* border pixel of windows */
 static const unsigned int gappx = 6;   /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int systraypinning =
@@ -17,20 +17,19 @@ static const int showsystray = 1; /* 0 means no systray */
 static const int showbar = 1;     /* 0 means no bar */
 static const int topbar = 1;      /* 0 means bottom bar */
 static const char *fonts[] = {
-    "JetBrains Mono Medium:size=11:antialias=true:autohint=true",
+    "JetBrains Mono Nerd Font:size=11:antialias=true:autohint=true",
     "Dejavu Sans Mono for Powerline:size=10",
-    "JoyPixels:size=11:antialias=true:autohint=true",
-    "FontAwesome:size=11:antialias=true:autohint=true",
+    "JoyPixels:size=10:antialias=true:autohint=true",
+    "FontAwesome:size=10:antialias=true:autohint=true",
 };
 static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
 #include "/home/ankit/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
-//static const char *tags[] = {"1", "2", "3", "4ﭮ",
-//                              "5", "6",};
-static const char *tags[] = {"1", "2", "3", "4",
-                            "5", "6",};
+static const char *tagsalt[] = {"1", "2", "3", "4",
+                            "5", "6","7","8","9"};
 
+static const char *tags[] = { "🐧", "🔎", "⌨️", "💬","👾", "🧲", "🖌️", "📺", "🎥"};
 //static const char *tags[] = {"🇦", "🌐", "👨‍💻", "💬",
 //                             "🎮", "🎵", "🧲", "🎥","💰"};
 
@@ -43,22 +42,22 @@ static const Rule rules[] =
          */
         /* class      instance   	title    	tags mask     isfloating
            monitor */
-        {"gimp", NULL, NULL, 0, 1, -1},
+        {"gimp", NULL, NULL, 1 << 6, 0, -1},
         {"Microsoft-edge-beta", NULL, NULL, 1 << 1, 0, -1},
         {"Brave-browser", NULL, NULL, 1 << 1, 0, -1},
         //{ "st-256color",  NULL,     NULL,		1 << 0,       0, -1 },
         //{ "Pcmanfm",  NULL, 		NULL,		1 << 2,       0, -1 },
-        {"discord", NULL, NULL, 1 << 3, 0, -1},
-        {"mpv", NULL, NULL, 1 << 3, 0, -1},
+        {"discord", NULL, NULL, 1 << 4, 0, -1},
+        {"mpv", NULL, NULL, 1 << 7, 0, -1},
         {"TelegramDesktop", NULL, NULL, 1 << 3, 0, -1},
         {"Signal", NULL, NULL, 1 << 3, 0, -1},
         {"code-oss", NULL, NULL, 1 << 2, 0, -1},
         {"TeamViewer", NULL, NULL, 1 << 3, 0, -1},
         {"AnyDesk", NULL, NULL, 1 << 3, 0, -1},
         {"Spotify", NULL, NULL, 1 << 5, 0, -1},
-        {"qBittorrent", NULL, NULL, 1 << 4, 0, -1},
-        {"obs", NULL, NULL, 1 << 5, 0, -1},
-        {"SimpleScreenRecorder", NULL, NULL, 1 << 5, 0, -1},
+        {"qBittorrent", NULL, NULL, 1 << 5, 0, -1},
+        {"obs", NULL, NULL, 1 << 8, 0, -1},
+        {"SimpleScreenRecorder", NULL, NULL, 1 << 8, 0, -1},
         {"Rofi", NULL, NULL, 1 << 8, 1, -1},
 };
 
@@ -161,11 +160,12 @@ static Key keys[] = {
     {MODKEY, XK_period, focusmon, {.i = +1}},
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
+	{ MODKEY,                       XK_n,      togglealttag,   {0} },
     {MODKEY, XK_minus, setgaps, {.i = -1}},
     {MODKEY, XK_equal, setgaps, {.i = +1}},
     {MODKEY | ShiftMask, XK_equal, setgaps, {.i = 0}},
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
-        TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) {MODKEY | ShiftMask, XK_r, quit, {0}},
+        TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7) TAGKEYS(XK_9, 8) { MODKEY | ShiftMask, XK_r, quit, {0}},
 };
 
 /* button definitions */
