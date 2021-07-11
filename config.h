@@ -29,7 +29,7 @@ static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
 static const char *tagsalt[] = {"1", "2", "3", "4",
                             "5", "6","7","8","9"};
 
-static const char *tags[] = { "🐧", "🔎", "⌨️", "💬","👾", "🧲", "🖌️", "📺", "🎥"};
+static const char *tags[] = { "🐧", "🔎", "⌨️", "💬","👾", "🧲", "🖌️", "📺", "📸"};
 //static const char *tags[] = {"🇦", "🌐", "👨‍💻", "💬",
 //                             "🎮", "🎵", "🧲", "🎥","💰"};
 
