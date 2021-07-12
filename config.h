@@ -95,6 +95,8 @@ static char dmenumon[2] =
 static const char *dmenucmd[] = { "dmenu_run"};
 static const char *term2cmd[] = {"alacritty", NULL};
 static const char *term1cmd[] = {"st", NULL};
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x30", NULL };
 static const char *filecmd[] = {"nautilus", NULL};
 static const char *roficmd[] = {"rofi", "-show", "run", NULL};
 static const char *edgecmd[] = {"microsoft-edge-beta", NULL};
@@ -129,6 +131,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_o, spawn, {.v = obs}},
     {MODKEY | ShiftMask, XK_b, spawn, {.v = bravecmd}},
     {MODKEY, XK_Return, spawn, {.v = term1cmd}},
+	{ MODKEY,                       XK_o,  togglescratch,  {.v = scratchpadcmd } },
     {ControlMask | Mod1Mask, XK_f, spawn, {.v = edgecmd}},
     {ControlMask | Mod1Mask, XK_t, spawn, {.v = term2cmd}},
     {MODKEY, XK_F12, spawn, {.v = roficmd}},
@@ -148,7 +151,6 @@ static Key keys[] = {
     {MODKEY, XK_m, setlayout, {.v = &layouts[1]}},
     {MODKEY, XK_f, setlayout, {.v = &layouts[2]}},
     {MODKEY, XK_u, setlayout, {.v = &layouts[3]}},
-    {MODKEY, XK_o, setlayout, {.v = &layouts[4]}},
     {MODKEY, XK_space, setlayout, {0}},
     {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
     {MODKEY, XK_0, view, {.ui = ~0}},
