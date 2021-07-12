@@ -93,8 +93,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run"};
-static const char *term1cmd[] = {"alacritty", NULL};
-static const char *term2cmd[] = {"st", NULL};
+static const char *term2cmd[] = {"alacritty", NULL};
+static const char *term1cmd[] = {"st", NULL};
 static const char *filecmd[] = {"nautilus", NULL};
 static const char *roficmd[] = {"rofi", "-show", "run", NULL};
 static const char *edgecmd[] = {"microsoft-edge-beta", NULL};
