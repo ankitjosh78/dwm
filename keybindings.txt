@@ -18,6 +18,8 @@ Win + Shift + b -->Brave
 
 Win + <F12> --> rofi launcher
 
+Win + o --> Opens scratchpad (default st)
+
 Win + Shift + o -->obs
 
 Win + Shift + n-->nitrogen(wallpaper selector)

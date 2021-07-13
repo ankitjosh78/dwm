@@ -19,7 +19,7 @@ static const int topbar = 1;      /* 0 means bottom bar */
 static const char *fonts[] = {
     "JetBrains Mono Nerd Font:size=11:antialias=true:autohint=true",
     "Dejavu Sans Mono for Powerline:size=10",
-    "JoyPixels:size=10:antialias=true:autohint=true",
+    "JoyPixels:size=11:antialias=true:autohint=true",
     "FontAwesome:size=10:antialias=true:autohint=true",
 };
 static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
@@ -29,7 +29,7 @@ static const char dmenufont[] = "JetBrains Mono Nerd Font:size=12";
 static const char *tagsalt[] = {"1", "2", "3", "4",
                             "5", "6","7","8","9"};
 
-static const char *tags[] = { "🐧", "🔎", "⌨️", "💬","👾", "🧲", "🖌️", "📺", "📸"};
+static const char *tags[] = { "🐧", "🔎", "⌨️", "💬", "👾", "🧲", "🖌️", "📺", "📸"};
 //static const char *tags[] = {"🇦", "🌐", "👨‍💻", "💬",
 //                             "🎮", "🎵", "🧲", "🎥","💰"};
 
@@ -43,6 +43,7 @@ static const Rule rules[] =
         /* class      instance   	title    	tags mask     isfloating
            monitor */
         {"gimp", NULL, NULL, 1 << 6, 0, -1},
+        {"kdenlive", NULL, NULL, 1 << 6, 0, -1},
         {"Microsoft-edge-beta", NULL, NULL, 1 << 1, 0, -1},
         {"Brave-browser", NULL, NULL, 1 << 1, 0, -1},
         //{ "st-256color",  NULL,     NULL,		1 << 0,       0, -1 },
@@ -122,7 +123,6 @@ static Key keys[] = {
     {MODKEY, XK_Print, spawn, {.v = scrotcmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = filecmd}},
     {MODKEY | ShiftMask, XK_n, spawn, {.v = nitrogencmd}},
-    {MODKEY | ShiftMask, XK_s, spawn, {.v = sublimecmd}},
     {MODKEY | ShiftMask, XK_c, spawn, SHCMD("codeforces")},
     {MODKEY | ShiftMask, XK_x, spawn, SHCMD("shut")},
     {MODKEY | ShiftMask, XK_p, spawn, SHCMD("practice")},
