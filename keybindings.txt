@@ -1,12 +1,12 @@
 Most Used Keybindings:
 
-Win + (Number[1-6])-->respective tag
+Win + (Number[1-9])-->respective tag
 
 Win + Enter -->st(terminal)
 
 Win + Shift + Enter -->nautilus(file manager)
 
-Ctrl + Alt + f -->Firefox
+Ctrl + Alt + f -->Microsoft Edge (if installed)
 
 Win + p -->dmenu
 
@@ -18,14 +18,10 @@ Win + Shift + b -->Brave
 
 Win + <F12> --> rofi launcher
 
-Win + Shift + s -->Spotify
-
-Win + Shift + c -->clementine
-
 Win + Shift + o -->obs
 
 Win + Shift + n-->nitrogen(wallpaper selector)
 
 Win + Shift + r-->Quit Dwm(or restart if you have an infinite loop in you .xinitrc)
 
-_Rest can be found by looking in the config.h file_
+* Rest can be found by looking in the config.h file *
