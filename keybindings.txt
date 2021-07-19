@@ -2,27 +2,27 @@ Most Used Keybindings:
 
 Win + (Number[1-9])-->respective tag
 
-Win + Enter -->st(terminal)
+Win + Enter -->st (terminal)
 
-Win + Shift + Enter -->nautilus(file manager)
+Alt + Ctrl + t --> alacritty (terminal)
 
-Ctrl + Alt + f -->Microsoft Edge (if installed)
+Win + Shift + Enter --> nautilus (file manager)
 
-Win + p -->dmenu
+Win + Shift + b --> brave (browser)
 
-Win + q -->kill application window
+Win + p --> dmenu (run menu)
+
+Win + q --> kill application window
 
 Win + Shift + d -->discord
 
-Win + Shift + b -->Brave
+Win + <F12> --> rofi launcher (run menu)
 
-Win + <F12> --> rofi launcher
+Win + o --> opens scratchpad (default st)
 
-Win + o --> Opens scratchpad (default st)
+Win + Shift + o --> obs
 
-Win + Shift + o -->obs
-
-Win + Shift + n-->nitrogen(wallpaper selector)
+Win + Shift + n--> nitrogen
 
 Win + Shift + r-->Quit Dwm(or restart if you have an infinite loop in you .xinitrc)
 
