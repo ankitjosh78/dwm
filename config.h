@@ -100,7 +100,6 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "100x30", NULL };
 static const char *filecmd[] = {"nautilus", NULL};
 static const char *roficmd[] = {"rofi", "-show", "run", NULL};
-static const char *edgecmd[] = {"microsoft-edge-beta", NULL};
 static const char *bravecmd[] = {"brave", NULL};
 static const char *nitrogencmd[] = {"nitrogen", NULL};
 static const char *obs[] = {"obs", NULL};
@@ -129,7 +128,6 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_b, spawn, {.v = bravecmd}},
     {MODKEY, XK_Return, spawn, {.v = term1cmd}},
 	{ MODKEY,                       XK_o,  togglescratch,  {.v = scratchpadcmd } },
-    {ControlMask | Mod1Mask, XK_f, spawn, {.v = edgecmd}},
     {ControlMask | Mod1Mask, XK_t, spawn, {.v = term2cmd}},
     {MODKEY, XK_F12, spawn, {.v = roficmd}},
     {MODKEY, XK_b, togglebar, {0}},
