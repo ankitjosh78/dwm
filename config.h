@@ -106,7 +106,6 @@ static const char *nitrogencmd[] = {"nitrogen", NULL};
 static const char *obs[] = {"obs", NULL};
 static const char *discord[] = {"discord", NULL};
 static const char *ytfzf[] = {"ytfzf","-DN", NULL};
-static const char *sublimecmd[] = {"subl3", NULL};
 static const char *scrotcmd[] = {"scrot", "-e", "mv $f ~/Pictures/ss/",
                                  NULL};
 static const char *upvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "+5%",
@@ -123,9 +122,7 @@ static Key keys[] = {
     {MODKEY, XK_Print, spawn, {.v = scrotcmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = filecmd}},
     {MODKEY | ShiftMask, XK_n, spawn, {.v = nitrogencmd}},
-    {MODKEY | ShiftMask, XK_c, spawn, SHCMD("codeforces")},
     {MODKEY | ShiftMask, XK_x, spawn, SHCMD("shut")},
-    {MODKEY | ShiftMask, XK_p, spawn, SHCMD("practice")},
     {MODKEY | ShiftMask, XK_y, spawn, {.v = ytfzf}},
     {MODKEY | ShiftMask, XK_d, spawn, {.v = discord}},
     {MODKEY | ShiftMask, XK_o, spawn, {.v = obs}},
