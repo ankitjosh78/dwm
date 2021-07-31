@@ -42,7 +42,7 @@ static const Rule rules[] =
          */
         /* class      instance   	title    	tags mask     isfloating
            monitor */
-        {"gimp", NULL, NULL, 1 << 6, 0, -1},
+        {"Gimp", NULL, NULL, 1 << 6, 0, -1},
         {"kdenlive", NULL, NULL, 1 << 6, 0, -1},
         {"Microsoft-edge-beta", NULL, NULL, 1 << 1, 0, -1},
         {"Brave-browser", NULL, NULL, 1 << 1, 0, -1},
@@ -55,7 +55,7 @@ static const Rule rules[] =
         {"code-oss", NULL, NULL, 1 << 2, 0, -1},
         {"TeamViewer", NULL, NULL, 1 << 3, 0, -1},
         {"AnyDesk", NULL, NULL, 1 << 3, 0, -1},
-        {"Spotify", NULL, NULL, 1 << 5, 0, -1},
+        {"Spotify", NULL, NULL, 1 << 7, 0, -1},
         {"qBittorrent", NULL, NULL, 1 << 5, 0, -1},
         {"obs", NULL, NULL, 1 << 8, 0, -1},
         {"SimpleScreenRecorder", NULL, NULL, 1 << 8, 0, -1},
