@@ -118,6 +118,7 @@ static Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},
     {MODKEY, XK_period, spawn, SHCMD("dmenuunicode")},
+    {MODKEY, XK_r, spawn, SHCMD("dmenurecord")},
     {MODKEY, XK_Print, spawn, {.v = scrotcmd}},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = filecmd}},
     {MODKEY | ShiftMask, XK_n, spawn, {.v = nitrogencmd}},

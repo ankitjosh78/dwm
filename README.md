@@ -18,6 +18,7 @@
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/vim.png?raw=true)
  ### Master and Stack Layout:
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/master_stack.png?raw=true)
+ ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/master_stack2.png?raw=true)
   ### Ranger File Manager:
  ![Screenshots](https://github.com/ankitjosh78/dwm/blob/main/screenshots/ranger.png?raw=true)
  
